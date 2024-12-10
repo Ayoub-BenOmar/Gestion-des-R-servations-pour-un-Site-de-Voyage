@@ -155,8 +155,7 @@
                 href="index.php"
                 class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
               >
-                
-                <svg
+              <svg
                   class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
                   aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
@@ -172,11 +171,10 @@
             </li>
             <li>
               <a
-                href="clientsList.php"
+                href="#"
                 class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
               >
-                
-                <svg
+              <svg
                   class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
                   aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
@@ -186,6 +184,7 @@
                   <path
                     d="M14 2a3.963 3.963 0 0 0-1.4.267 6.439 6.439 0 0 1-1.331 6.638A4 4 0 1 0 14 2Zm1 9h-1.264A6.957 6.957 0 0 1 15 15v2a2.97 2.97 0 0 1-.184 1H19a1 1 0 0 0 1-1v-1a5.006 5.006 0 0 0-5-5ZM6.5 9a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9ZM8 10H5a5.006 5.006 0 0 0-5 5v2a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1v-2a5.006 5.006 0 0 0-5-5Z"
                   />
+                </svg>
                 </svg>
                 <span class="flex-1 ms-3 whitespace-nowrap">Clients list</span>
               </a>
@@ -251,10 +250,10 @@
                     d="M12.5 0c-.157 0-.311.01-.565.027A1 1 0 0 0 11 1.02V10h8.975a1 1 0 0 0 1-.935c.013-.188.028-.374.028-.565A8.51 8.51 0 0 0 12.5 0Z"
                   />
                 </svg>
+                
                 <span class="flex-1 ms-3 whitespace-nowrap">Dashboard</span>
               </a>
             </li>
-            
             <li>
               <a
                 href="#"
@@ -391,236 +390,136 @@
         </aside>
 
         <div class="p-4 sm:ml-64">
-            <div class="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700">
-                <div class="grid grid-cols-1 lg:grid-cols-[40%,1fr]">
+            <div class="p-4 border-2 border-gray-200 border-dashed rounded-lg">
+                <!-- <div class="grid grid-cols-7">
                     <div class="w-full max-h-full">
-                        <div class="p-4 w-full max-h-full">
-            <!-- Modal content -->
-                            <div class="bg-orange-300 rounded-lg shadow">
-              <!-- Modal header -->
+                        <div class=" w-full max-h-full">
+                            <div class="bg-orange-300 shadow">
                                 <div
-                                    class="flex items-center justify-between p-4 border-b rounded-t">
+                                    class="flex items-center justify-between p-4 border-b">
                                     <h3 class="text-lg font-semibold text-gray-900">
-                                    Add Client
+                                    ID Client
                                     </h3>
                                 </div>
-              <!-- Modal body -->
-                                <form class="p-4 md:p-5" action="addClient.php" method="post">
-                                    <div class="grid gap-4 mb-4 grid-cols-2">
-                                    <div class="col-span-1"> <label class="block mb-2 text-sm font-medium text-gray-900 ">Name</label
-                                        >
-                                        <input
-                                        name="name"
-                                        type="text"
-                                        id="name"
-                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
-                                        placeholder="Name"
-                                        required=""
-                                        />
-                                    </div>
-                                    <div class="col-span-1">
-                                        <label
-                                        class="block mb-2 text-sm font-medium text-gray-900 "
-                                        >Last Name</label
-                                        >
-                                        <input
-                                        name="prenom"
-                                        type="text"
-                                        id="last-name"
-                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5"
-                                        placeholder="Last Name"
-                                        required=""
-                                        />
-                                    </div>
-                                    <div class="col-span-2">
-                                        <label
-                                        class="block mb-2 text-sm font-medium text-gray-900 "
-                                        >Phone Number</label
-                                        >
-                                        <input
-                                        name="phone"
-                                        type="number"
-                                        id="phone"
-                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5"
-                                        required=""
-                                        />
-                                    </div>
-                                    <div class="col-span-2">
-                                        <label
-                                        class="block mb-2 text-sm font-medium text-gray-900 "
-                                        >Email</label
-                                        >
-                                        <input
-                                        name="email"
-                                        type="email"
-                                        id="mail"
-                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5"
-                                        required=""
-                                        />
-                                    </div>
-
-                                    <div class="mb-4">
-                                        <label
-                                        for="date"
-                                        class="block text-sm font-medium text-gray-900 "
-                                        >Birth Date</label
-                                        >
-                                        <input
-                                        type="date"
-                                        id="date"
-                                        name="date"
-                                        class="bg-gray-50 border mt-1 border-gray-300 text-gray-900 text-sm rounded-lg w-full p-2.5"
-                                        />
-                                    </div>
-                                    </div>
-                                    <div class="col-span-2">
-                                    <label
-                                        class="block mb-2 text-sm font-medium text-gray-900 "
-                                        >Adresse</label
-                                    >
-                                    <textarea
-                                        name="adresse"
-                                        id="Adresse"
-                                        rows="4"
-                                        class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300"
-                                    ></textarea>
-                                    </div>
-
-                                    <button
-                                    type="submit"
-                                    class="text-gray-700 inline-flex items-center bg-white hover:bg-orange-600 font-medium rounded-lg text-sm mt-2 px-5 py-2.5 text-center"
-                                    >
-                                    <svg
-                                        class="me-1 -ms-1 w-5 h-5"
-                                        fill="currentColor"
-                                        viewBox="0 0 20 20"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                        <path
-                                        fill-rule="evenodd"
-                                        d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"
-                                        clip-rule="evenodd"
-                                        ></path>
-                                    </svg>
-                                    Add
-                                    </button>
-                                </form>
                             </div>
+                            3
                         </div>
                     </div>
-                    <div class="p-4 w-full max-h-full">
-                        <div class="bg-orange-300 rounded-lg">
-                          <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t">
-                              <h3 class="text-lg font-semibold text-gray-900 ">
-                                Add Activity
-                              </h3>
-                          </div>
-                          <form class="p-4 md:p-5" action="addActivity.php" method="post">
-                                    <div class="grid gap-4 mb-4 grid-cols-2">
-                                    <div class="col-span-1"> <label class="block mb-2 text-sm font-medium text-gray-900 ">Title</label
-                                        >
-                                        <input
-                                        name="title"
-                                        type="text"
-                                        id="name"
-                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
-                                        placeholder="Name"
-                                        required=""
-                                        />
-                                    </div>
-                                    <div class="col-span-2 sm:col-span-1">
-                                    <div class="col-span-1"> <label class="block mb-2 text-sm font-medium text-gray-900 ">Destination</label
-                                        >
-                                        <input
-                                        name="dest"
-                                        type="text"
-                                        id="dest"
-                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
-                                        placeholder="Destination"
-                                        required=""
-                                        />
-                                    </div>
-                                  </div>
-                                    <div class="col-span-2">
-                                    <label class="block mb-2 text-sm font-medium text-gray-900 ">Description</label>
-                                    <textarea
-                                        name="desc"
-                                        id="Adresse"
-                                        rows="4"
-                                        class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300"
-                                    ></textarea>
-                                    </div>
-                                    <div class="mb-4">
-                                        <label
-                                        for="date"
-                                        class="block text-sm font-medium text-gray-900 "
-                                        >Date Debut</label
-                                        >
-                                        <input
-                                        type="date"
-                                        id="date"
-                                        name="dateDebut"
-                                        class="bg-gray-50 border mt-1 border-gray-300 text-gray-900 text-sm rounded-lg w-full p-2.5"
-                                        />
-                                    </div>
-                                    <div class="mb-4">
-                                        <label
-                                        for="date"
-                                        class="block text-sm font-medium text-gray-900 "
-                                        >Date Fin</label
-                                        >
-                                        <input
-                                        type="date"
-                                        id="date"
-                                        name="dateFin"
-                                        class="bg-gray-50 border mt-1 border-gray-300 text-gray-900 text-sm rounded-lg w-full p-2.5"
-                                        />
-                                    </div>
-                                    <div  class="col-span-2">
-                                    </div>
-                                    <div class="col-span-1"> <label class="block mb-2 text-sm font-medium text-gray-900 ">Price</label
-                                        >
-                                        <input
-                                        name="price"
-                                        type="number"
-                                        id="name"
-                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
-                                        placeholder="Price"
-                                        required=""
-                                        />
-                                    </div>
-                                    <div class="col-span-1"> <label class="block mb-2 text-sm font-medium text-gray-900 ">Places disponibles</label
-                                        >
-                                        <input
-                                        name="places"
-                                        type="number"
-                                        id="name"
-                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
-                                        placeholder="Places disponibles"
-                                        required=""
-                                        />
-                                    </div>
-                                    </div>
-                                    <button
-                                    type="submit"
-                                    class="text-gray-700 inline-flex items-center bg-white hover:bg-orange-600 font-medium rounded-lg text-sm mt-2 px-5 py-2.5 text-center"
-                                    >
-                                    <svg
-                                        class="me-1 -ms-1 w-5 h-5"
-                                        fill="currentColor"
-                                        viewBox="0 0 20 20"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                        <path
-                                        fill-rule="evenodd"
-                                        d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"
-                                        clip-rule="evenodd"
-                                        ></path>
-                                    </svg>
-                                    Add
-                                    </button>
-                                </form>
+                    <div class="w-full max-h-full">
+                        <div class="w-full max-h-full">
+                            <div class="bg-orange-300 shadow">
+                                <div
+                                    class="flex items-center justify-between p-4 border-b">
+                                    <h3 class="text-lg font-semibold text-gray-900">
+                                    Name
+                                    </h3>
+                                </div>
+                            </div>
+                            ayoub
                         </div>
+                    </div>
+                    <div class="w-full max-h-full">
+                        <div class="w-full max-h-full">
+                            <div class="bg-orange-300 shadow">
+                                <div
+                                    class="flex items-center justify-between p-4 border-b">
+                                    <h3 class="text-lg font-semibold text-gray-900">
+                                    Last Name
+                                    </h3>
+                                </div>
+                            </div>
+                            ben omar
+                        </div>
+                    </div>
+                    <div class="w-full max-h-full">
+                        <div class="w-full max-h-full">
+                            <div class="bg-orange-300 shadow">
+                                <div
+                                    class="flex items-center justify-between p-4 border-b">
+                                    <h3 class="text-lg font-semibold text-gray-900">
+                                    Email
+                                    </h3>
+                                </div>
+                            </div>
+                            ayoub@hotmail.fr
+                        </div>
+                    </div>
+                    <div class="w-full max-h-full">
+                        <div class="w-full max-h-full">
+                            <div class="bg-orange-300 shadow">
+                                <div
+                                    class="flex items-center justify-between p-4 border-b">
+                                    <h3 class="text-lg font-semibold text-gray-900">
+                                    Telephone
+                                    </h3>
+                                </div>
+                            </div>
+                            06584696
+                        </div>
+                    </div>
+                    <div class="w-full max-h-full">
+                        <div class="w-full max-h-full">
+                            <div class="bg-orange-300 shadow">
+                                <div
+                                    class="flex items-center justify-between p-4 border-b">
+                                    <h3 class="text-lg font-semibold text-gray-900">
+                                    Adresse
+                                    </h3>
+                                </div>
+                            </div>
+                            rue 205 
+                        </div>
+                    </div>
+                    <div class="w-full max-h-full">
+                        <div class="w-full max-h-full">
+                            <div class="bg-orange-300 shadow">
+                                <div
+                                    class="flex items-center justify-between p-4 border-b">
+                                    <h3 class="text-lg font-semibold text-gray-900">
+                                    Birth Date
+                                    </h3>
+                                </div>
+                            </div>
+                            15/9/2030
+                        </div>
+                    </div>
+                </div> -->
+                <div class="container mx-auto rounded-lg">
+                    <div class="overflow-x-auto">
+                    <table class="min-w-full table-auto border-collapse border border-gray-300">
+                        <thead>
+                        <tr class="bg-gray-200 text-gray-700">
+                            <th class="px-4 py-2 bg-orange-300 border border-gray-300 text-left">ID Client</th>
+                            <th class="px-4 py-2 bg-orange-300 border border-gray-300 text-left">Name</th>
+                            <th class="px-4 py-2 bg-orange-300 border border-gray-300 text-left">Last Name</th>
+                            <th class="px-4 py-2 bg-orange-300 border border-gray-300 text-left">Email</th>
+                            <th class="px-4 py-2 bg-orange-300 border border-gray-300 text-left">Telephone</th>
+                            <th class="px-4 py-2 bg-orange-300 border border-gray-300 text-left">Adresse</th>
+                            <th class="px-4 py-2 bg-orange-300 border border-gray-300 text-left">Date de Naissance</th>
+                        </tr>
+                        </thead>
+                        <tbody class="text-gray-600">
+                            <?php
+                            include ("db.php");
+                            $sql = "SELECT * FROM `client`";
+                            $result = $conn -> query($sql);
+                            ?>
+                            <?php while ($row = $result->fetch_assoc()) : ?>
+                        <tr class="hover:bg-gray-100">
+                            <td class="px-4 py-2 border border-gray-300"><?php echo $row["id_client"] ?></td>
+                            <td class="px-4 py-2 border border-gray-300"><?php echo $row["nom"] ?></td>
+                            <td class="px-4 py-2 border border-gray-300"><?php echo $row["prenom"] ?></td>
+                            <td class="px-4 py-2 border border-gray-300"><?php echo $row["email"] ?></td>
+                            <td class="px-4 py-2 border border-gray-300"><?php echo $row["telephone"] ?></td>
+                            <td class="px-4 py-2 border border-gray-300"><?php echo $row["adresse"] ?></td>
+                            <td class="px-4 py-2 border border-gray-300"><?php echo $row["date_naissance"] ?></td>
+                        </tr>
+                        <?php 
+                        endwhile
+                        ?>
+                        <!-- Add more rows as needed -->
+                        </tbody>
+                    </table>
                     </div>
                 </div>
             </div>
