@@ -392,19 +392,16 @@
 
         <div class="p-4 sm:ml-64">
             <div class="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700">
-                <div class="grid grid-cols-1 lg:grid-cols-[40%,1fr]">
+                <div class="grid grid-cols-3">
                     <div class="w-full max-h-full">
                         <div class="p-4 w-full max-h-full">
-            <!-- Modal content -->
                             <div class="bg-orange-300 rounded-lg shadow">
-              <!-- Modal header -->
                                 <div
                                     class="flex items-center justify-between p-4 border-b rounded-t">
                                     <h3 class="text-lg font-semibold text-gray-900">
                                     Add Client
                                     </h3>
                                 </div>
-              <!-- Modal body -->
                                 <form class="p-4 md:p-5" action="addClient.php" method="post">
                                     <div class="grid gap-4 mb-4 grid-cols-2">
                                     <div class="col-span-1"> <label class="block mb-2 text-sm font-medium text-gray-900 ">Name</label
@@ -510,7 +507,7 @@
                     </div>
                     <div class="p-4 w-full max-h-full">
                         <div class="bg-orange-300 rounded-lg">
-                          <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t">
+                          <div class="flex items-center justify-between p-4 border-b rounded-t">
                               <h3 class="text-lg font-semibold text-gray-900 ">
                                 Add Activity
                               </h3>
@@ -620,6 +617,53 @@
                                     Add
                                     </button>
                                 </form>
+                        </div>
+                    </div>
+                    <div class="p-4 w-full max-h-full">
+                        <div class="bg-orange-300 rounded-lg">
+                          <div class="flex items-center justify-between p-4 border-b rounded-t">
+                              <h3 class="text-lg font-semibold text-gray-900 ">
+                                Add Activity
+                              </h3>
+                          </div>
+                          <form class="p-4" action="" method="post">
+                            <div class="grid grid-col-1 gap-4">
+                              <div>
+                              <?php
+                                include ("db.php");
+                                $sql = "SELECT * FROM `client`";
+                                $result = $conn -> query($sql);
+                                ?>
+                              <label class="block mb-2 text-sm font-medium text-gray-900 ">Clients</label>
+                              <select name="clients" id="" class="bg-gray-50 border border-gray-300 text-gray-700 text-sm rounded-lg block w-full p-2.5">
+                                Clients
+                                <?php while ($row = $result->fetch_assoc()): ?> 
+                                <option value="<?php echo $row["id_client"]?>"><?php echo $row["nom"]. $row["prenom"]?></option>
+                                <?php endwhile ?>
+                              </select>
+                              </div>
+                              <div>
+                              <?php
+                            include ("db.php");
+                            $sql = "SELECT * FROM `activite`";
+                            $result = $conn -> query($sql);
+                            ?>
+                              <label class="block mb-2 text-sm font-medium text-gray-900 ">Activite</label>
+                              <select name="activite" id="" class="bg-gray-50 border border-gray-300 text-gray-700 text-sm rounded-lg block w-full p-2.5">
+                                Clients
+                                <?php while ($row = $result->fetch_assoc()): ?> 
+                                <option value="<?php echo $row["id_activite"]?>"><?php echo $row["destination"]?></option>
+                                <?php endwhile ?>
+                              </select>
+                              </div>
+                              </div>
+                              <button type="submit" class="text-gray-700 inline-flex items-center bg-white hover:bg-orange-600 font-medium rounded-lg text-sm mt-2 px-5 py-2.5 text-center">
+                                <svg
+                                  class="me-1 -ms-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"> <path fill-rule="evenodd" d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" clip-rule="evenodd"></path>
+                                </svg>
+                                  Add
+                              </button>
+                          </form>
                         </div>
                     </div>
                 </div>

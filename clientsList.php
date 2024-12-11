@@ -517,7 +517,6 @@
                         <?php 
                         endwhile
                         ?>
-                        <!-- Add more rows as needed -->
                         </tbody>
                     </table>
                     </div>
