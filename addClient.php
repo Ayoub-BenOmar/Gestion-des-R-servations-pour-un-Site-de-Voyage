@@ -11,7 +11,7 @@ include "db.php";
     // echo $name . $prenom . $phone . $email . $date . $adresse;
 
     $sql = "INSERT INTO `client`(`nom`,`prenom`,`email`,`telephone`,`adresse`,`date_naissance`) 
-            VALUES('$name', '$prenom', '$phone', '$email','$adresse', '$date')";
+            VALUES('$name', '$prenom', '$email', '$phone','$adresse', '$date')";
 
     $result = $conn->query($sql);
     header("Location: index.php");

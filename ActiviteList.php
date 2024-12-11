@@ -171,7 +171,7 @@
             </li>
             <li>
               <a
-                href="#"
+                href="clientsList.php"
                 class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
               >
               <svg
@@ -489,30 +489,32 @@
                     <table class="min-w-full table-auto border-collapse border border-gray-300">
                         <thead>
                         <tr class="bg-gray-200 text-gray-700">
-                            <th class="px-4 py-2 bg-orange-300 border border-gray-300 text-left">ID Client</th>
-                            <th class="px-4 py-2 bg-orange-300 border border-gray-300 text-left">Name</th>
-                            <th class="px-4 py-2 bg-orange-300 border border-gray-300 text-left">Last Name</th>
-                            <th class="px-4 py-2 bg-orange-300 border border-gray-300 text-left">Email</th>
-                            <th class="px-4 py-2 bg-orange-300 border border-gray-300 text-left">Telephone</th>
-                            <th class="px-4 py-2 bg-orange-300 border border-gray-300 text-left">Adresse</th>
-                            <th class="px-4 py-2 bg-orange-300 border border-gray-300 text-left">Date de Naissance</th>
+                        <th class="px-4 py-2 bg-orange-300 border border-gray-300 text-left">ID Activity</th>
+                            <th class="px-4 py-2 bg-orange-300 border border-gray-300 text-left">Title</th>
+                            <th class="px-4 py-2 bg-orange-300 border border-gray-300 text-left">Description</th>
+                            <th class="px-4 py-2 bg-orange-300 border border-gray-300 text-left">Destination</th>
+                            <th class="px-4 py-2 bg-orange-300 border border-gray-300 text-left">Price</th>
+                            <th class="px-4 py-2 bg-orange-300 border border-gray-300 text-left">Start Date </th>
+                            <th class="px-4 py-2 bg-orange-300 border border-gray-300 text-left">End Date</th>
+                            <th class="px-4 py-2 bg-orange-300 border border-gray-300 text-left">Available Places</th>
                         </tr>
                         </thead>
                         <tbody class="text-gray-600">
                             <?php
                             include ("db.php");
-                            $sql = "SELECT * FROM `client`";
+                            $sql = "SELECT * FROM `activite`";
                             $result = $conn -> query($sql);
                             ?>
                             <?php while ($row = $result->fetch_assoc()) : ?>
                         <tr class="hover:bg-gray-100">
-                            <td class="px-4 py-2 border border-gray-300"><?php echo $row["id_client"] ?></td>
-                            <td class="px-4 py-2 border border-gray-300"><?php echo $row["nom"] ?></td>
-                            <td class="px-4 py-2 border border-gray-300"><?php echo $row["prenom"] ?></td>
-                            <td class="px-4 py-2 border border-gray-300"><?php echo $row["email"] ?></td>
-                            <td class="px-4 py-2 border border-gray-300"><?php echo $row["telephone"] ?></td>
-                            <td class="px-4 py-2 border border-gray-300"><?php echo $row["adresse"] ?></td>
-                            <td class="px-4 py-2 border border-gray-300"><?php echo $row["date_naissance"] ?></td>
+                            <td class="px-4 py-2 border border-gray-300"><?php echo $row["id_activite"] ?></td>
+                            <td class="px-4 py-2 border border-gray-300"><?php echo $row["titre"] ?></td>
+                            <td class="px-4 py-2 border border-gray-300"><?php echo $row["description"] ?></td>
+                            <td class="px-4 py-2 border border-gray-300"><?php echo $row["destination"] ?></td>
+                            <td class="px-4 py-2 border border-gray-300"><?php echo $row["prix"] ?></td>
+                            <td class="px-4 py-2 border border-gray-300"><?php echo $row["date_debut"] ?></td>
+                            <td class="px-4 py-2 border border-gray-300"><?php echo $row["date_fin"] ?></td>
+                            <td class="px-4 py-2 border border-gray-300"><?php echo $row["places_disponible"] ?></td>
                         </tr>
                         <?php 
                         endwhile
