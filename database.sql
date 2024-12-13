@@ -29,7 +29,7 @@ CREATE TABLE IF NOT EXISTS reservation (
     id_reservation INT(11) NOT NULL AUTO_INCREMENT,
     id_client INT(11) NOT NULL,
     id_activite INT(11) NOT NULL,
-    date_reservation TIMESTAMP NOT NULL,
+    date_reservation TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     status ENUM('En attente', 'Confirmée', 'Annulée') NOT NULL,
     PRIMARY KEY (id_reservation),
     FOREIGN KEY (id_client) REFERENCES client(id_client) ON DELETE CASCADE,
