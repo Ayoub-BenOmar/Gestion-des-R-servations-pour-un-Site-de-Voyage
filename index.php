@@ -632,8 +632,9 @@
                                 ?>
                               <label class="block mb-2 text-sm font-medium text-gray-900 ">Clients</label>
                               <select name="clientSelect" id="" class="bg-gray-50 border border-gray-300 text-gray-700 text-sm rounded-lg block w-full p-2.5">
-                                
+                              <option disabled selected="">Choose Client</option>
                                 <?php while ($row = $result->fetch_assoc()): ?> 
+                                
                                 <option value="<?php echo $row["id_client"]?>"><?php echo $row["nom"]. $row["prenom"]?></option>
                                 <?php endwhile ?>
                               </select>
@@ -644,9 +645,9 @@
                             $sql = "SELECT * FROM `activite`";
                             $result = $conn -> query($sql);
                             ?>
-                              <label class="block mb-2 text-sm font-medium text-gray-900 ">Activite</label>
+                              <label class="block mb-2 text-sm font-medium text-gray-900 ">Activity</label>
                               <select name="activiteSelect" id="" class="bg-gray-50 border border-gray-300 text-gray-700 text-sm rounded-lg block w-full p-2.5">
-                                
+                              <option disabled selected="">Choose Activiy</option>
                                 <?php while ($row = $result->fetch_assoc()): ?> 
                                 <option value="<?php echo $row["id_activite"]?>"><?php echo $row["destination"]?></option>
                                 <?php endwhile ?>
@@ -655,7 +656,7 @@
                               <div>
                               <label class="block mb-2 text-sm font-medium text-gray-900 ">Status</label>
                               <select name="status" id="" class="bg-gray-50 border border-gray-300 text-gray-700 text-sm rounded-lg block w-full p-2.5">
-                                
+                              <option disabled selected="">Choose Status</option>
                                <option value="En attente">En Attente</option>
                                <option value="Confirmée">Confirmeé</option>
                                <option value="Annulée">Annulée</option>
